@@ -1,10 +1,11 @@
-me/stefanberger/m2/M2Application.class
-me/stefanberger/m2/UserBreedController.class
 me/stefanberger/m2/DomainObject.class
 me/stefanberger/m2/Breed.class
 me/stefanberger/m2/M2ExceptionHandler.class
 me/stefanberger/m2/UserRepository.class
-me/stefanberger/m2/BreedRepository.class
 me/stefanberger/m2/UserController.class
 me/stefanberger/m2/User.class
+me/stefanberger/m2/M2Application.class
+me/stefanberger/m2/UserBreedController.class
+me/stefanberger/m2/BreedController.class
+me/stefanberger/m2/BreedRepository.class
 me/stefanberger/m2/Pet.class

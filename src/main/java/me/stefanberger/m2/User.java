@@ -23,6 +23,10 @@ public class User implements DomainObject {
             inverseJoinColumns = {@JoinColumn(name = "breed_id", referencedColumnName = "id")})
     private Set<Breed> favoriteBreeds = new HashSet<>();
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     @Override
     public Long getId() {
         return id;
@@ -40,8 +44,8 @@ public class User implements DomainObject {
         favoriteBreeds.add(breed);
     }
 
-    public void removeFavoriteBreed(Breed breed) {
-        favoriteBreeds.remove(breed);
+    public void removeFavoriteBreeds() {
+        favoriteBreeds.clear();
     }
 
     public Set<Breed> getFavoriteBreeds() {

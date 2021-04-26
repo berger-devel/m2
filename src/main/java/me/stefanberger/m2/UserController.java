@@ -34,6 +34,7 @@ public class UserController {
     @PutMapping("/{id}")
     public User updateUser(@PathVariable Long id, @RequestBody User user) {
         Preconditions.checkArgument(user.getPet() != null, "Missing argument: pet");
+        user.setId(id);
         return userRepository.save(user);
     }
 

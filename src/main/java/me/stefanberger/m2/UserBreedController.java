@@ -6,9 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -43,15 +41,11 @@ public class UserBreedController {
     }
 
     @DeleteMapping
-    public void removeBreedFromUser(@RequestBody List<List<Long>> mappings) {
-        mappings.forEach(assignment -> Preconditions.checkArgument(assignment.size() == 2, "Invalid User ID <=> Breed ID mapping: " + assignment));
-        Map<Long, User> userIdToUser = loadIdToObjectMap(mappings.stream().map(mapping -> mapping.get(0)).collect(Collectors.toSet()), userRepository, User.class);
-        Map<Long, Breed> breedIdToBreed = loadIdToObjectMap(mappings.stream().map(mapping -> mapping.get(1)).collect(Collectors.toSet()), breedRepository, Breed.class);
-        mappings.forEach(mapping -> {
-            User user = userIdToUser.get(mapping.get(0));
-            user.removeFavoriteBreed(breedIdToBreed.get(mapping.get(1)));
-        });
-        userRepository.saveAll(userIdToUser.values());
+    @RequestMapping("/{id}")
+    public void removeBreedsFromUser(@PathVariable Long id) {
+        User user = userRepository.findById(id).orElseThrow(NoSuchElementException::new);
+        user.removeFavoriteBreeds();
+        userRepository.save(user);
     }
 
     private <T extends DomainObject> Map<Long, T> loadIdToObjectMap(Set<Long> ids, CrudRepository<T, Long> repository, Class<T> clazz) {
