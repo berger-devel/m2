@@ -54,7 +54,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: p1f3y7o9
-        ECR_REPOSITORY: m2
+        ECR_REPOSITORY: mx
         IMAGE_TAG: latest
       run: |
         # Build a docker container and
