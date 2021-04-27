@@ -1,6 +1,6 @@
 # M2 Backend Challenge
 
-Visit https://m2.stefan-berger.me or run the docker image: `docker run -d --name m2 bergers/m2`.
+Visit [https://m2.stefan-berger.me:8080](https://m2.stefan-berger.me:8080) or run the docker image: `docker run -d -p 8080:8080 --name m2 docker.io/bergers/m2`.
 The best way to test is with Postman, but there's also a nice frontend page. 
 
 The available endpoints are
