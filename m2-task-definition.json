@@ -10,7 +10,7 @@
         "secretOptions": null,
         "options": {
           "awslogs-group": "/ecs/m2-task-definition",
-          "awslogs-region": "us-east-2",
+          "awslogs-region": "eu-central-1",
           "awslogs-stream-prefix": "ecs"
         }
       },
@@ -31,7 +31,7 @@
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "bergers/m2",
+      "image": "bergers/m2:latest",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -58,7 +58,7 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-2:233688669026:task-definition/m2-task-definition:1",
+  "taskDefinitionArn": "arn:aws:ecs:eu-central-1:233688669026:task-definition/m2-task-definition:1",
   "family": "m2-task-definition",
   "requiresAttributes": [
     {
