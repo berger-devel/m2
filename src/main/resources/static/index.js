@@ -2,7 +2,7 @@ let userId;
 
 // Loads the list of users from the backend
 function fetchUsers() {
-    $.get("http://localhost/user?cachebust=" + new Date(), success = (users) => {
+    $.get("/user?cachebust=" + new Date(), success = (users) => {
         const table = $("#users_table").empty();
         table.append($('<tr><th>ID</th><th>Name</th><th>Pet</th><th>Favourite Breeds</th></tr>'));
 
@@ -21,7 +21,7 @@ function step2() {
     const name = $('#name').val();
     const pet = $('#pet').val();
     let method = 'POST';
-    let url = 'http://localhost/user';
+    let url = '/user';
 
     if (userId) {
         method = 'PUT';
@@ -40,7 +40,7 @@ function step2() {
         }
     });
 
-    jQuery.get('http://localhost/breed/' + pet, success = (breeds) => {
+    jQuery.get('/breed/' + pet, success = (breeds) => {
             const div = $('#step2 .hidden');
             div.removeClass('hidden');
             const table = $('#step2_table').empty();
@@ -65,7 +65,7 @@ function assignBreeds() {
     });
 
     jQuery.ajax({
-        url: 'http://localhost/userBreed',
+        url: '/userBreed',
         type: 'PUT',
         data: JSON.stringify(ids),
         contentType: 'application/json; charset=utf-8',
