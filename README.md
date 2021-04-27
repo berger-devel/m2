@@ -14,4 +14,5 @@ Endpoint URL | Method | Decription
 /userBreed | PUT | Assign breed to user
 /userBreed | DELETE | Remove breed from user
 
-![CI/CD workf;low](https://github.com/berger-devel/m2/actions/workflows/maven.yml/badge.svg?event=push)
+![CI/CD workflow](https://github.com/berger-devel/m2/actions/workflows/maven.yml/badge.svg)
+[![Deploy to Amazon ECS](https://github.com/berger-devel/m2/actions/workflows/aws.yml/badge.svg)](https://github.com/berger-devel/m2/actions/workflows/aws.yml)
