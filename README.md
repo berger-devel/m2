@@ -13,3 +13,5 @@ Endpoint URL | Method | Decription
 /user/{id} | DELETE | Delete user
 /userBreed | PUT | Assign breed to user
 /userBreed | DELETE | Remove breed from user
+
+![CI/CD workf;low](https://github.com/berger-devel/m2/actions/workflows/maven.yml/badge.svg)
