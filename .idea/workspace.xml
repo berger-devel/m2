@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fc93a9d-a9a6-4176-a4e8-f8d55b748f9d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/aws.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/stefanberger/m2/m2-task-definition.json" beforeDir="false" afterPath="$PROJECT_DIR$/m2-task-definition.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -64,7 +64,7 @@
           <entry key="java" value="21" />
           <entry key="json" value="2" />
           <entry key="md" value="3" />
-          <entry key="yml" value="2" />
+          <entry key="yml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -75,7 +75,7 @@
           <entry key="JAVA" value="21" />
           <entry key="JSON" value="2" />
           <entry key="Markdown" value="3" />
-          <entry key="YAML" value="2" />
+          <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -100,11 +100,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/me/stefanberger/m2/m2-task-definition.json">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/m2-task-definition.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
+            <state relative-caret-position="1575">
               <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.github/workflows/aws.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -124,6 +133,8 @@
     <findStrings>
       <find>regist</find>
       <find>ECR_REGISTRY</find>
+      <find>task-def</find>
+      <find>task-definition.json</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,8 +170,8 @@
         <option value="$PROJECT_DIR$/src/test/java/me/stefanberger/m2/UserControllerTest.java" />
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/.github/workflows/aws.yml" />
         <option value="$PROJECT_DIR$/src/main/java/me/stefanberger/m2/aws_ecs_task_definition.json" />
+        <option value="$PROJECT_DIR$/.github/workflows/aws.yml" />
       </list>
     </option>
   </component>
@@ -249,27 +260,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="m2" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="backendchallenge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backendchallenge" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="backendchallenge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backendchallenge" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="backendchallenge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="backendchallenge" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="m2" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -284,7 +274,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1619519931772" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1619520344146" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -298,6 +288,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -332,12 +325,12 @@
       <option name="presentableId" value="Default" />
       <updated>1619464451820</updated>
       <workItem from="1619464457282" duration="725000" />
-      <workItem from="1619465287179" duration="13628000" />
+      <workItem from="1619465287179" duration="14034000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14353000" />
+    <option name="totallyTimeSpent" value="14759000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1680" height="966" extended-state="0" />
@@ -581,17 +574,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.github/workflows/aws.yml">
+    <entry file="file://$PROJECT_DIR$/m2-task-definition.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+        <state relative-caret-position="1575">
+          <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/stefanberger/m2/m2-task-definition.json">
+    <entry file="file://$PROJECT_DIR$/.github/workflows/aws.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
+        <state relative-caret-position="205">
+          <caret line="70" column="28" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
         </state>
       </provider>
     </entry>
