@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fc93a9d-a9a6-4176-a4e8-f8d55b748f9d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/aws.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -61,7 +62,7 @@
           <entry key="class" value="1" />
           <entry key="html" value="1" />
           <entry key="java" value="21" />
-          <entry key="json" value="1" />
+          <entry key="json" value="2" />
           <entry key="md" value="3" />
           <entry key="yml" value="2" />
         </counts>
@@ -72,7 +73,7 @@
           <entry key="Dockerfile" value="1" />
           <entry key="HTML" value="1" />
           <entry key="JAVA" value="21" />
-          <entry key="JSON" value="1" />
+          <entry key="JSON" value="2" />
           <entry key="Markdown" value="3" />
           <entry key="YAML" value="2" />
         </counts>
@@ -100,10 +101,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.github/workflows/aws.yml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/me/stefanberger/m2/m2-task-definition.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+            <state relative-caret-position="459">
+              <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -156,10 +157,10 @@
         <option value="$PROJECT_DIR$/src/main/java/me/stefanberger/m2/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/stefanberger/m2/UserController.java" />
         <option value="$PROJECT_DIR$/src/test/java/me/stefanberger/m2/UserControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/me/stefanberger/m2/aws_ecs_task_definition.json" />
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.github/workflows/aws.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/me/stefanberger/m2/aws_ecs_task_definition.json" />
       </list>
     </option>
   </component>
@@ -283,7 +284,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1619519558208" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1619519931772" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -331,12 +332,12 @@
       <option name="presentableId" value="Default" />
       <updated>1619464451820</updated>
       <workItem from="1619464457282" duration="725000" />
-      <workItem from="1619465287179" duration="13338000" />
+      <workItem from="1619465287179" duration="13628000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14063000" />
+    <option name="totallyTimeSpent" value="14353000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1680" height="966" extended-state="0" />
@@ -560,13 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/stefanberger/m2/aws_ecs_task_definition.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.github/workflows/maven.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -591,6 +585,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="56" column="26" selection-start-line="56" selection-start-column="26" selection-end-line="56" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/stefanberger/m2/m2-task-definition.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="105" column="1" selection-start-line="105" selection-start-column="1" selection-end-line="105" selection-end-column="1" />
         </state>
       </provider>
     </entry>
