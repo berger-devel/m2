@@ -27,6 +27,7 @@ public class UserBreedController {
 
     @PutMapping
     public Iterable<User> assignBreedToUser(@RequestBody List<List<Long>> mappings) {
+        Preconditions.checkArgument(mappings != null && mappings.size() != 0);
         mappings.forEach(assignment -> Preconditions.checkArgument(assignment.size() == 2, "Invalid User ID <=> Breed ID mapping: " + assignment));
         Map<Long, User> userIdToUser = loadIdToObjectMap(mappings.stream().map(mapping -> mapping.get(0)).collect(Collectors.toSet()), userRepository, User.class);
         Map<Long, Breed> breedIdToBreed = loadIdToObjectMap(mappings.stream().map(mapping -> mapping.get(1)).collect(Collectors.toSet()), breedRepository, Breed.class);

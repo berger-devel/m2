@@ -7,12 +7,12 @@
 }
 
 #step1 {
-    background-color: greenyellow;
+    background-color: yellow;
     padding: 0 10px;
 }
 
 #step2 div {
-    background-color: yellow;
+    background-color: greenyellow;
     height: 100%;
     padding: 1em 10px 0 10px;
 }
