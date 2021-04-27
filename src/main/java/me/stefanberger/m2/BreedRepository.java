@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.Collection;
 
 /**
- * Repository for Breed records
+ * Repository for breed records
  */
 public interface BreedRepository extends CrudRepository<Breed, Long> {
     Collection<Breed> findByPet(Pet pet);

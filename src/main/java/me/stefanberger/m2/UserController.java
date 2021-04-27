@@ -20,22 +20,42 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
+    /**
+     * Retrieve all users from the database
+     * @return an {@code Iterable<User>} for all present users
+     */
     @GetMapping
     public Iterable<User> getAll() {
         return userRepository.findAll();
     }
 
+    /**
+     * Retrieve a single user
+     * @param id the ID of the user to retrieve
+     * @return the {@code User} corresponding to the given ID
+     */
     @GetMapping("/{id}")
     public User getUser(@PathVariable Long id) {
         return userRepository.findById(id).orElseThrow(NoSuchElementException::new);
     }
 
+    /**
+     * Create a new user in the database
+     * @param user The user to create. The `pet` property is mandatory.
+     * @return the newly created {@code User}
+     */
     @PostMapping
-    public User addUser(@RequestBody User user) {
+    public User createUser(@RequestBody User user) {
         Preconditions.checkArgument(user.getPet() != null, "Missing argument: pet");
         return userRepository.save(user);
     }
 
+    /**
+     * Create a new or update an existing {@code User} with the given ID
+     * @param id the ID of the user to update
+     * @param user the {@code User} to update
+     * @return the newly created or updated {@code User}
+     */
     @PutMapping("/{id}")
     public User updateUser(@PathVariable Long id, @RequestBody User user) {
         Preconditions.checkArgument(user.getPet() != null, "Missing argument: pet");
@@ -43,6 +63,10 @@ public class UserController {
         return userRepository.save(user);
     }
 
+    /**
+     * Delete a user
+     * @param id the ID of the user to delete
+     */
     @DeleteMapping("/{id}")
     public void deleteUser(@PathVariable Long id) {
         userRepository.deleteById(id);

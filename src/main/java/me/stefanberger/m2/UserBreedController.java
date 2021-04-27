@@ -11,7 +11,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * REST endpoint to maintain assignments of favorite breeds to users
+ * REST endpoints to maintain assignments of favorite breeds to users
  */
 @RestController
 @RequestMapping("/userBreed")
@@ -25,8 +25,14 @@ public class UserBreedController {
         this.breedRepository = breedRepository;
     }
 
+    /**
+     * Assign to the user IDs the breed IDs.
+     * @param mappings User Id - Breed Id pairs. The Collection must consist of Lists with exactly 2 elements each,
+     *                 specifically a user Id and a breed Id.
+     * @return An {@code Iterable<User>} of the {@code User}s which were assigned breeds
+     */
     @PutMapping
-    public Iterable<User> assignBreedToUser(@RequestBody List<List<Long>> mappings) {
+    public Iterable<User> assignBreedToUser(@RequestBody Collection<List<Long>> mappings) {
         Preconditions.checkArgument(mappings != null && mappings.size() != 0);
         mappings.forEach(assignment -> Preconditions.checkArgument(assignment.size() == 2, "Invalid User ID <=> Breed ID mapping: " + assignment));
         Map<Long, User> userIdToUser = loadIdToObjectMap(mappings.stream().map(mapping -> mapping.get(0)).collect(Collectors.toSet()), userRepository, User.class);

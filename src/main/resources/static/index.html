@@ -2,6 +2,10 @@
 <head>
     <title>M2 Backend Challenge</title>
 
+    <link href='https://fonts.googleapis.com/css?family=Open_Sans:300,400,500,300italic'
+          rel='stylesheet'
+          type='text/css'>
+
     <link rel="stylesheet" href="index.css">
 
     <script
@@ -14,22 +18,22 @@
 </head>
 <body>
 <div class="container">
-    <div id="step1">
-        <p>Choose a name and your favourite pet:</p>
+    <div id="step1" class="border">
+        <p>Choose a username and your favourite pet:</p>
         <form>
             <p>
                 <label for="name">Name</label>
                 <input id="name" type="text">
             </p>
             <p>
-                <label for="pet">Favourtite Pet</label>
+                <label for="pet">Favourite Pet</label>
                 <select id="pet" name="pet">
                     <option>Cat</option>
                     <option>Dog</option>
                 </select>
             </p>
             <div>
-                <input type="button" value="Next" onclick="step2()"/>
+                <input type="button" value="Next" onclick="saveUser()"/>
             </div>
         </form>
     </div> <div id="step2">
@@ -43,7 +47,7 @@
     </div>
 </div>
 <div class="container">
-    <div id="users">
+    <div id="users" class="border">
         <p>Registered Users:</p>
         <table id="users_table"></table>
     </div>

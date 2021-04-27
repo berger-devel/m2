@@ -17,7 +17,7 @@ public class M2ExceptionHandler extends ResponseEntityExceptionHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler({IllegalArgumentException.class, NullPointerException.class})
     public ResponseEntity<String> handle400(IllegalArgumentException e) {
-        return new ResponseEntity(e.getMessage(), HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
     @ResponseStatus(HttpStatus.NOT_FOUND)

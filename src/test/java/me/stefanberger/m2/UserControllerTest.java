@@ -19,13 +19,13 @@ class UserControllerTest {
     void testAddUser() {
         User user = new User();
         user.setPet(Pet.Dog);
-        userController.addUser(user);
+        userController.createUser(user);
     }
 
     @Test
     void testAddUserMissingPet() {
         User user = new User();
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> userController.addUser(user));
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> userController.createUser(user));
         assertEquals("Missing argument: pet", exception.getMessage());
     }
 

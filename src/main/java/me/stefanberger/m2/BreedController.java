@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Collection;
-
+/**
+ * REST endpoints to maintain assignments of breeds to users
+ */
 @RestController
 @RequestMapping("/breed")
 public class BreedController {
@@ -18,6 +19,11 @@ public class BreedController {
         this.breedRepository = breedRepository;
     }
 
+    /**
+     * Retrieve all breeds for a given pet
+     * @param pet the pet to retrieve the breeds for
+     * @return an {@code Iterable<Breed>} for the breeds of this pet
+     */
     @GetMapping("/{pet}")
     public Iterable<Breed> getAllByPet(@PathVariable Pet pet) {
         return breedRepository.findByPet(pet);
