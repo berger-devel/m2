@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>M2 Backend Challenge</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+    </script>
+
+    <script src="index.js"></script>
+</head>
+<body>
+<div class="container">
+    <div id="step1">
+        <p>Choose a name and your favourite pet:</p>
+        <form>
+            <p>
+                <label for="name">Name</label>
+                <input id="name" type="text">
+            </p>
+            <p>
+                <label for="pet">Favourtite Pet</label>
+                <select id="pet" name="pet">
+                    <option>Cat</option>
+                    <option>Dog</option>
+                </select>
+            </p>
+            <div>
+                <input type="button" value="Next" onclick="step2()"/>
+            </div>
+        </form>
+    </div> <div id="step2">
+        <div class="hidden">
+            <p>Choose your favourite breeds:</p>
+            <p>
+            <table id="step2_table"></table>
+            </p>
+            <p><input type="button" onclick="assignBreeds()" value="Save"></p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div id="users">
+        <p>Registered Users:</p>
+        <table id="users_table"></table>
+    </div>
+</div>
+<div>
+    <p><a href=".">Refresh this page to create another user</a></p>
+</div>
+</body>
+</html>

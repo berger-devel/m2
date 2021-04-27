@@ -1,0 +1,51 @@
+.container > div {
+    display: inline-block;
+    width: 30%;
+    height: 250px;
+    vertical-align: top;
+    overflow: scroll;
+}
+
+#step1 {
+    background-color: greenyellow;
+    padding: 0 10px;
+}
+
+#step2 div {
+    background-color: yellow;
+    height: 100%;
+    padding: 1em 10px 0 10px;
+}
+
+#step2 div p:first-child {
+    margin-top: 0;
+}
+
+#users {
+    background-color: deepskyblue;
+    margin-top: 4px;
+    padding: 0 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+table {
+    border: none;
+    border-collapse: collapse;
+}
+
+#users_table th {
+    border-bottom: 1px solid black;
+    text-align: left;
+}
+
+#users_table td, th {
+    border-right: 1px solid black;
+    padding: 2px;
+}
+
+#users_table td:last-child, th:last-child {
+    border: none;
+}

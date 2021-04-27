@@ -14,6 +14,8 @@ public class User implements DomainObject {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String name;
+
     @Enumerated(EnumType.STRING)
     private Pet pet;
 
@@ -32,6 +34,10 @@ public class User implements DomainObject {
         return id;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public Pet getPet() {
         return pet;
     }
@@ -44,7 +50,7 @@ public class User implements DomainObject {
         favoriteBreeds.add(breed);
     }
 
-    public void removeFavoriteBreeds() {
+    public void clearFavoriteBreeds() {
         favoriteBreeds.clear();
     }
 

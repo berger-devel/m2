@@ -54,14 +54,4 @@ class UserBreedControllerTest {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> userBreedController.assignBreedToUser(mappings));
         assertEquals("Can't assign breed Persian to Dog person", exception.getMessage());
     }
-
-    @Test
-    void testRemoveBreedFromUser() {
-        userBreedController.removeBreedsFromUser(1L);
-    }
-
-    @Test
-    void testRemoveBreedFromUserInvalidUserId() {
-        assertThrows(NoSuchElementException.class, () -> userBreedController.removeBreedsFromUser(2L));
-    }
 }

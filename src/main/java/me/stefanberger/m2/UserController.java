@@ -4,6 +4,7 @@ import com.google.common.base.Preconditions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.NoSuchElementException;
 
 /**
@@ -17,6 +18,11 @@ public class UserController {
     @Autowired
     public UserController(UserRepository userRepository) {
         this.userRepository = userRepository;
+    }
+
+    @GetMapping
+    public Iterable<User> getAll() {
+        return userRepository.findAll();
     }
 
     @GetMapping("/{id}")
