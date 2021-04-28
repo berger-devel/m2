@@ -1,7 +1,7 @@
 # M2 Backend Challenge
 
 Run the docker image: `docker run -d -p 8080:8080 --name m2 docker.io/bergers/m2` or visit 
-[http://18.185.179.35:8080](http://18.185.179.35:8080).
+[http://3.66.231.145:8080](http://3.66.231.145:8080).
 The best way to test is with Postman, but there's also a nice frontend page. 
 
 The available endpoints are
