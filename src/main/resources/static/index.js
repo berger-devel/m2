@@ -55,7 +55,7 @@ function displayBreedCheckboxes(breeds) {
     const div = $('#step2 .hidden');
     div.removeClass('hidden');
     const table = $('#step2_table').empty();
-    breeds.forEach(breed => {
+    breeds.sort((a, b) => a.name < b.name ? -1 : a.name > b.name ? 1 : 0).forEach(breed => {
         const row = $('<tr><td></td></tr>');
         const id = 'breed-' + breed.id;
         const label = $('<label></label>').attr('for', id).text(breed.name);
