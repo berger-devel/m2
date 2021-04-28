@@ -16,9 +16,8 @@ Endpoint URL | Method | Decription
 /userBreed | PUT | Assign breeds to user
 
 Some security/safety concerns were neglected for this challenge. The app is deployed to AWS ECS for HTTP, not HTTPS. 
-There's no login, everybody can see all users, and the frontend page is missing some error handling,
-for example for failed HTTP requests. Also, in production there would be a better test coverage and a different 
-database to persist the records.
+There's no login, so everybody can see all users, and the frontend page is missing some error handling,
+for example for failed HTTP requests. Also, in production there would be a different database to persist the records.
 
 The app utilises the popular Guava library, mostly for precondition checks in the controllers.
 
