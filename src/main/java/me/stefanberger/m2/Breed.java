@@ -22,24 +22,28 @@ public class Breed implements DomainObject {
     @ManyToMany(mappedBy = "favoriteBreeds")
     private Set<User> users = new HashSet<>();
 
+    /**
+     * Get the ID of the breed
+     * @return the ID of the breed
+     */
     @Override
     public Long getId() {
         return id;
     }
 
+    /**
+     * Get the name of the breed
+     * @return the name of the breed
+     */
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
+    /**
+     * Get the pet that's of the breed
+     * @return the pet
+     */
     public Pet getPet() {
         return pet;
-    }
-
-    public void setPet(Pet pet) {
-        this.pet = pet;
     }
 }

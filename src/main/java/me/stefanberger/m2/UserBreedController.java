@@ -50,6 +50,14 @@ public class UserBreedController {
         return userRepository.saveAll(userIdToUser.values());
     }
 
+    /**
+     * Load the domain objects and return a map from their IDs to the domain objects
+     * @param ids the IDs of the records to load
+     * @param repository the repository to load the records from
+     * @param clazz the class of the domain object
+     * @param <T> the type parameter for the domain object, specified by the clazz parameter
+     * @return a map from domain object IDs to domain objects
+     */
     private <T extends DomainObject> Map<Long, T> loadIdToObjectMap(Set<Long> ids, CrudRepository<T, Long> repository, Class<T> clazz) {
         Set<T> foundRecords = Sets.newHashSet(repository.findAllById(ids));
 
