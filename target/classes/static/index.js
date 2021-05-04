@@ -39,6 +39,9 @@ function saveUser() {
         data: JSON.stringify({"name": name, "pet": pet}),
         contentType: 'application/json; charset=utf-8',
         dataType: 'json',
+        error: (jqXHR, textStatus, errorThrown) => {
+            alert("Server nicht Verfügbar." + textStatus);
+        },
         success: (user) => {
             userId = user.id;
             fetchUsers();
