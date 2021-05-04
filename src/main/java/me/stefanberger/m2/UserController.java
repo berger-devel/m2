@@ -25,8 +25,11 @@ public class UserController {
      * @return an {@code Iterable<User>} for all present users
      */
     @GetMapping
-    public Iterable<User> getAll() {
-        return userRepository.findAll();
+    public Iterable<User> getAll(@RequestParam(required = false) String name) {
+        if(name == null){
+            return userRepository.findAll();
+        }
+        return userRepository.findByName(name);
     }
 
     /**
